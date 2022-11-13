@@ -60,6 +60,13 @@ function sendStatusToWindow(text) {
 }
 function createDefaultWindow() {
   win = new BrowserWindow({
+    width: 1280,
+    height: 720,
+    title: "RAGE B-Hood Launcher",
+    maximizable: false,
+    fullscreenable: false,
+    resizable: false,
+    icon: __dirname + '/assets/img/logo-icon.png',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false

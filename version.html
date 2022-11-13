@@ -1,24 +1,166 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Electron Updater Example</title>
-</head>
-<body>
-  Current version: <span id="version">vX.Y.Z</span>
-  <div id="messages"></div>
-<script>
-// Display the current version
-let version = window.location.hash.substring(1);
-document.getElementById('version').innerText = version;
-
-// Listen for messages
-const {ipcRenderer} = require('electron');
-ipcRenderer.on('message', function(event, text) {
-  var container = document.getElementById('messages');
-  var message = document.createElement('div');
-  message.innerHTML = text;
-  container.appendChild(message);
-})
-</script>
-</body>
+  <head>
+    <title>RAGE B-Hood Launcher</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="comunitate de să:mp și rage românească">
+    <link rel="stylesheet" href="assets/css/main.css">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="assets/js/antisteal.js"></script>
+    <script src="assets/js/smooth.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro-v4-shims.min.css" media="all">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro-v4-font-face.min.css"
+      media="all">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro.min.css" media="all">
+  </head>
+  <body>
+    <div class="containerz">
+      <div class="line"></div>
+      <div class="stefMain">
+        <div class="stefLogo">
+          <a>Brotherhood</a>
+        </div>
+        <div class="stefMenu">
+          <a href="#" target="_blank" class="menuItem activez">Home</a>
+          <a href="https://forum.b-hood.ro" target="_blank" class="menuItem">Forum</a>
+          <a href="https://ragepanel.b-hood.ro" target="_blank" class="menuItem">Panel</a>
+        </div>
+        <div class="stefSocials">
+          <a href="https://discord.gg/EdXdfbBwrA" target="_blank"><i class="fab fa-discord"></i></a>
+          <a href="https://www.youtube.com/raduq" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/groups/386382608524337" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/raduqnc/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+  
+      <div class="main-bhood">
+        <div class="connect active" style="width: 400px; height: 486px; transform: translate(750px); margin: 0">
+          <p style="margin: 0; padding: 0; position: relative; transform: translate(20px, 10px); font-size: 15px; font-weight: 700;">Select a server to join:</p>
+          <div class="server-card">
+            <i class="fa fa-circle" style="color: green" aria-hidden="true"></i>
+            <p id="svname">RAGE B-Hood Official</p>
+            <p id="number-players-official" class="number-players">100</p>
+          </div>
+          <div class="server-card" style="margin-top: 5px;">
+            <i class="fa fa-circle" style="color: red" aria-hidden="true"></i>
+            <p id="svname">RAGE B-Hood Beta</p>
+            <p id="number-players-beta" class="number-players">0</p>
+          </div>
+    
+          <form method="post" onsubmit="return false" action="#">
+            <div class="settings-form">
+              <label for="playername">Player name:</label><br>
+              <input type="text" id="playername" name="playername" maxlength="32" placeholder="Enter game name:"><br>
+              <label for="microphone">Microphone:</label><br>
+              
+    
+              <select name="audioDevices" id="microphone" onChange="update()"><br>
+    
+              </select><br>
+    
+              <input type="checkbox" id="cefrendering" name="cefrendering" value="cef">
+              <label for="cefrendering"> GPU CEF rendering</label><br><br>
+              <input type="submit" id="play" onclick="location.href='rage://v/connect?ip=193.203.39.174:22005';" value="PLAY">
+              <input style="display: none" type="text" id="text">
+            </div>
+          </form>
+        </div>
+    
+        <div class="connect active" style="width: 600px; height: 486px; position: absolute; top: 90px; left: 130px; margin: 0">
+          <div class="stefLogo" style="transform: translate(30px, 20px);">
+            <a style="font-size: 30px">News</a>
+          </div>
+          <div class="newstextbox" style="transform: translate(30px, 20px);">
+            <p style="font-size: 15px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptatem dolorum maxime perferendis quibusdam ipsa, recusandae animi odit consectetur nesciunt placeat est modi non autem, itaque culpa! Sapiente minima laborum dolor culpa provident hic delectus corrupti praesentium voluptatem quo officia at, modi itaque repellendus amet laudantium magnam eos quae pariatur aperiam accusantium, eaque natus doloremque veritatis! At similique sed quae sequi tempora suscipit molestiae repellendus cumque culpa nesciunt deleniti, modi reprehenderit odit quas enim nihil expedita error quidem vero facere quia assumenda deserunt! Omnis cupiditate vel saepe minima commodi fugit facere unde officiis! Eos aut porro maxime dolorem enim sunt autem, odit nulla odio tempore, minima, reiciendis nesciunt distinctio ea blanditiis facere modi rem id optio quis sequi adipisci qui necessitatibus beatae! Beatae, accusamus praesentium. Adipisci, officia. Pariatur, magnam quis! Corporis natus similique animi tempore fugit incidunt accusantium earum labore tenetur ut libero quod, veniam mollitia optio! Suscipit a quis consectetur itaque provident tempora libero sequi ut repellendus, doloribus velit voluptates ab illum soluta eos! Quod excepturi voluptates quisquam? Perspiciatis consequatur sed, ad laudantium incidunt cum tempore iste. Nesciunt fuga ipsa eos autem, consectetur voluptatem dolorem cumque beatae doloribus laudantium? Facere autem optio distinctio repudiandae quas quia. Asperiores, cupiditate distinctio?</p>
+          </div>
+        </div>
+      </div>
+  
+      <footer class="flex-wrap justify-content-between align-items-center footerStefan">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="https://youtube.com/iamCibu" target="_blank" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">software developed by
+            cibu</a>
+        </div>
+  
+        <div class="justify-content-end">
+          <a href="">build version: <span id="version"></span></a>
+        </div>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+      <script src="./renderer.js"></script>
+      <script type="text/javascript">
+        let version = window.location.hash.substring(1);
+        document.getElementById('version').innerText = version;
+  
+        function update() {
+          var select = document.getElementById('microphone');
+          var option = select.options[select.selectedIndex];
+  
+          document.getElementById('text').value = option.text;
+        }
+  
+        update();
+      </script>
+      <script>
+        let countDevices = 0;
+        if (!navigator.mediaDevices?.enumerateDevices) {
+          console.log("enumerateDevices() not supported.");
+        } else {
+          // List cameras and microphones.
+          navigator.mediaDevices.enumerateDevices()
+            .then((devices) => {
+              let text = `<option value ="selectmic">--- SELECT MIC ---</option>`;
+              devices.forEach((device) => {
+                if (device.kind == "audioinput") {
+                  console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+                  text += `<option id="micselect" value ="${device.label}">${device.label}</option>`;
+                  countDevices++;
+                  document.getElementById("microphone").innerHTML = text;
+                }
+              });
+              document.getElementById("microphone").innerHTML = text;
+            })
+            .catch((err) => {
+              console.error(`${err.name}: ${err.message}`);
+            });
+        }
+        const userName = document.getElementById("playername");
+        const microPhone = document.getElementById("micselect");
+        const allCards = document.querySelectorAll(".server-card");
+  
+        $(".server-card").click(function(e) {
+            allCards.forEach((cardnr) => {
+              console.log(`hi`);
+              $(cardnr).css("border", "0px solid red");
+            })
+            var title = $(this).find("#svname").text()
+            console.log(title);
+  
+            $(this).css("border", "1px solid #098a3f");
+        })
+  
+        $("#play").click(function(e) {
+          console.log(document.getElementById("playername").value);
+          console.log(document.getElementById('text').value);
+          document.getElementById('cefrendering').checked?console.log("1"):console.log("0");
+  
+          //settings file
+          var config_file = fs.createWriteStream('config.bhood', {
+              // 'a' means appending (old data will be preserved)
+          })
+  
+          config_file.write(document.getElementById("playername").value + '\n' + document.getElementById("text").value + '\n' + document.getElementById('cefrendering').checked); // append string to your file
+        })
+      </script>
+    </div>
+  </body>
 </html>
