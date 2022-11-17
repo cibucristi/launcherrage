@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ragemp</title>
+<script src="/cdn-cgi/apps/head/RZ3FxADa8IOxcYnpASrIrcMDfLk.js"></script><script src="/cdn-cgi/apps/head/RZ3FxADa8IOxcYnpASrIrcMDfLk.js"></script><link rel="stylesheet" type="text/css" href="./css/rui.css">
+<link rel="stylesheet" type="text/css" href="./css/fonts.shared.min.css">
+<link href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&amp;subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script src="./js/rui.js"></script>
+</head>
+
+<body>
+<div id="main_menu" class="ui_element">
+	<div class="_bg"></div>
+	<div class="_b">
+		<div class="header">
+			<div class="main-width clear">
+				<div class="nav">
+					<div class="nv left">
+						<ul>
+							<li class="active"><a href="#home" class="tr-home">Home</a></li>
+							<li>
+							<!--li class="sub"--><a href="#servers" class="tr-servers">Servers</a>
+								<!--ul class="sub-nav">
+									<li><a href="#">Internet</a></li>
+									<li><a href="#">Verified</a></li>
+									<li><a href="#">Favorites</a></li>
+								</ul-->
+							</li>
+							<li><a href="#direct" class="tr-direct_connect">Direct connect</a></li>
+						</ul>
+					</div>
+					<div class="nv right">
+						<ul>
+							<li><a href="#settings" class="tr-settings">Settings</a></li>
+							<li><a href="#aboutus" class="tr-aboutus">About us</a></li>
+							<li><a href="javascript://" onclick="mp.invoke('exec', 'quit')"><span class="tr-quit">Quit game</span><div class="ico-quit"></div></a></li>
+						</ul>
+					</div>
+					
+				</div>
+				<a href="#" class="logo"></a>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="main-width">
+				<div id="home" class="tab-content active">
+					<div class="title">Have a nice testing<span>Open beta-test releases</span></div>
+					<div class="note">Note: please send screenshots/etc only on BugTracker!</div>
+					<div class="news clear">
+					<a class="item jet" href="#">
+						<img style="opacity: 0.7; height: 35vh;" src="./img/news/news01.png" alt="">
+					</a>
+					<a class="item" href="#">
+						<img style="opacity: 0.7; height: 35vh;" src="./img/news/news02.png" alt="">
+					</a>
+					</div>
+				</div>
+				
+				<div id="servers" class="tab-content">
+					<!--div class="server-list">
+						<div class="item"><a href="#" class="active">Official</a></div>
+						<div class="item"><a href="#">Internet</a></div>
+						<div class="item"><a href="#">Verified</a></div>
+						<div class="item"><a href="#">Favorites</a></div>
+					</div-->
+					<table class="table">
+						<tr class="_h">
+							<th></th>
+							<th><input type="text" class="input-search" placeholder="Search server"><span></span></th>
+							<th>Select mode</th>
+							<th><a href="#" class="sort-arrow _players_sort"><img src='./img/arrow_down_icon.png' />Players</a></th>
+							<th>Website</th>
+							<th>Country</th>
+							<th><a href="#" class="sort-arrow _ping_sort"><img src='./img/arrow_down_icon.png' />Ping</a></th>
+							<th><a href="javascript://" class="refresh _refresh_button">Refresh list</a></th>
+						</tr>	
+						<tbody><tr style="height: 14px"></tr></tbody>
+						<tbody class="_server_list">
+						
+						</tbody>
+					</table>
+				</div>
+				<div id="direct" class="tab-content">
+					<div class="title tr-direct_connect">Direct Connect<span class="tr-directsub">Got the server IP? Manually connect</span></div>
+					<div class="input-form">
+						<input type="text" class="input" id="direct_connect_input" value="127.0.0.1:22005" placeholder="127.0.0.1:22005">
+						<div class="right">Connecting to <span class="entered"></span> <a class="direct_connect_button" href="javascript://">&nbsp;Connect</a></div>
+					</div>
+				</div>
+				<div id="aboutus" class="tab-content">
+						<span class="aboutus-text"><b>RAGE Multiplayer</b> is an initiative started by an experienced team to provide an alternative, enjoyable
+						and stable multiplayer experience for <b>Grand Theft Auto V</b>. Started in May 2016, RAGE continues to be a very delicate
+						project with great potential seen and noticed by many. Our sole focus is to mold this project in a self-sustaining
+						community that promotes creativity and originality. Thanks to the C++ foundation which RAGE is built upon, it does
+						not depend on any external files or programs. RAGE is a complete, stand-alone client with great functionality. The
+						team constantly focuses on improving performance and stability while simultaneously adding new features and expanding
+						the API. As the future progresses, so does RAGE - and it is within both our hearts and minds to keep delivering you
+						the best experience possible in the online GTA V community.
+						<br/><br/>
+						As of July 2017, we have announced or co-operation and merge with GTA Network. We are combining both projects and team into 
+						one to unify and strengthen the development of an alternative multiplayer experience for Grand Theft Auto V. Is it unknown 
+						what name the new project will continue under, however we are in the process of preparing and finalizing.</span>
+				</div>			
+				<div id="settings" class="tab-content">
+					<div class="title">Settings<span>Cuztomize, Change, Dominate!</span></div>
+					
+					<!--div class="input-form">
+					<div class="sub-title">Gamepath:</div>
+						<input type="text" class="input" value="path">
+						<div class="right">Сhange your gamepath? <a href="#">Save</a></div>
+					</div-->
+					<div class="sub-title">Username:</div>
+					<div class="nick"><input id="nickname_change" type="text" class="input" value="huh"></div>
+					<div class="lang">
+						<a href="#" class="active"><img src="img/languages/en.png" alt="">English</a>
+						<a href="#"><img src="img/languages/ru.png" alt="">Русский</a>
+						<a href="#"><img src="img/languages/ge.png" alt="">Deutsch</a>
+						<a href="#"><img src="img/languages/fr.png" alt="">Français</a>
+						<a href="#"><img src="img/languages/es.png" alt="">Espanol</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="connect_notification" class="ui_element">
+Server closed the connection.
+<a href="javascript://" onclick="">okay</a>
+</div>
+</body>
+</html>
